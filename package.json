@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "initLibsJs":"node build/bin/libs-entry.js",
+    "compile:es":""
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -23,6 +25,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "json-templater": "^1.2.0",
+    "uppercamelcase": "^3.0.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
