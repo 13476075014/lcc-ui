@@ -14,10 +14,10 @@ module.exports = {
     output: {
         path: path.resolve(process.cwd(), './lib'),
         publicPath: '/dist/',
-        filename: 'lcc-ui.common.js',
+        filename: 'lccx-ui.common.js',
         chunkFilename: '[name].js',
         libraryExport: 'default',
-        library: 'LCCUI',
+        library: 'LCCXUI',
         libraryTarget: 'commonjs2'
       },
       resolve: {

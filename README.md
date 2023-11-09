@@ -1,4 +1,4 @@
-# lcc-ui
+# lccx-ui
 
 ## Project setup
 ```
