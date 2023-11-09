@@ -1,12 +1,12 @@
 <template>
   <div>
-    checkbox
+    checkbox:这里是1
   </div>
 </template>
 
 <script>
 export default {
-    name:"lcc-checkbox"
+  name: 'lcc-checkbox'
 }
 </script>
 

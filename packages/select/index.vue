@@ -1,12 +1,12 @@
 <template>
   <div>
-    select
+    select：这里是3
   </div>
 </template>
 
 <script>
 export default {
-    name:"lcc-select"
+  name: 'lcc-select'
 }
 </script>
 

@@ -1,12 +1,12 @@
 <template>
   <div>
-    input
+    input：这里是2
   </div>
 </template>
 
 <script>
 export default {
-    name:"lcc-input"
+  name: 'lcc-input'
 }
 </script>
 
