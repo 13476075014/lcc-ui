@@ -16,7 +16,9 @@
     "initLibsJs": "node build/bin/libs-entry.js",
     "build:umdjs": "webpack --config build/webpack/webpack.libs.js",
     "compile:es": "",
-    "commit":"git add . && git cz",
+    "commit": "git add . && git cz",
+    "standard": "standard-version",
+    "update:version": "node ./build/bin/version.js",
     "clean": "rimraf lib"
   },
   "dependencies": {
@@ -43,6 +45,7 @@
     "json-templater": "^1.2.0",
     "progress-bar-webpack-plugin": "^2.1.0",
     "rimraf": "^5.0.5",
+    "standard-version": "^9.5.0",
     "style-loader": "^3.3.3",
     "uppercamelcase": "^3.0.0",
     "url-loader": "^4.1.1",
@@ -54,8 +57,8 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog",
-      "defaultType":"[新增功能]",
-       "types": {
+      "defaultType": "[新增功能]",
+      "types": {
         "[新增功能]": {
           "description": "新增功能点、新增需求",
           "title": "Features"
