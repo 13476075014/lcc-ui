@@ -20,7 +20,7 @@ inquirer.prompt([
 ]).then(({ version }) => {
   const type = version.split(':')[0]
   if (type !== 'skip') {
-    exec(`npm run standard -- --release-as ${type}`)
+    exec(`npm run standard -- --release-as ${type} && git push --tags `)
     console.log('正在更新版本号.....')
   }
 }).catch((err) => {

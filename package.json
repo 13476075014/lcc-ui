@@ -18,7 +18,7 @@
     "compile:es": "",
     "commit": "git add . && git cz",
     "standard": "standard-version",
-    "update:version": "node ./build/bin/version.js && git push",
+    "update:version": "node ./build/bin/version.js",
     "clean": "rimraf lib"
   },
   "dependencies": {
