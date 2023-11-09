@@ -20,6 +20,7 @@ inquirer.prompt([
 ]).then(({ version }) => {
   const type = version.split(':')[0]
   if (type !== 'skip') {
+    // 生成版本 打 git tag ,生成changelog，push标签到远程
     exec(`npm run standard -- --release-as ${type} && git push --tags `)
     console.log('正在更新版本号.....')
   }
