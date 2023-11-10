@@ -1,4 +1,5 @@
 # lccx-ui
+webpack5 + vue2
 
 ## Project setup
 ```

@@ -10,7 +10,7 @@ const glob = require("glob");
 const uppercamelcase = require("uppercamelcase");
 const render = require('json-templater/string');
 var endOfLine = require('os').EOL;
-const componentsDir = path.join(__dirname,"../../packages/**/*.js");
+const componentsDir = path.join(__dirname,"../../packages/*/*.js");
 
 const allComponentsFiles = glob.sync(componentsDir,"");
 

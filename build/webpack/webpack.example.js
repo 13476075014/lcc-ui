@@ -8,10 +8,11 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/main.js',
   output: {
-    path: path.resolve(process.cwd(), './dist')
+    path: path.resolve(process.cwd(), './dist'),
+    clean: true
   },
   resolve: {
     alias: {

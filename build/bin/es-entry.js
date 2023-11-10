@@ -10,9 +10,9 @@ const glob = require("glob");
 const uppercamelcase = require("uppercamelcase");
 const render = require('json-templater/string');
 var endOfLine = require('os').EOL;
-const componentsDir = path.join(__dirname,"../../packages/**/*.js");
+const componentsDir = path.join(__dirname,"../../packages/*/*.js");//需要排除packages/index.js
 
-const allComponentsFiles = glob.sync(componentsDir,"");
+const allComponentsFiles = glob.sync(componentsDir);
 
 // 文件里面引入组件的模板
 var IMPORT_TEMPLATE_ES = 'import {{name}} from \'./{{package}}/index.js\';';
@@ -38,6 +38,9 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
+export {
+  {{list}}
+}
 export default {
   version: '{{version}}',
   install,
@@ -47,6 +50,7 @@ export default {
 
 const includeTemplate = []; //动态引入组件的集合 例如 import a from "a"
 const includeComponents = []; //动态引入组件的组件数组集合例如 [a,b]
+console.log(allComponentsFiles,"allComponentsFiles")
 allComponentsFiles.forEach(c=>{
     const package = path.basename(path.dirname(c));
     const name = uppercamelcase(package);
