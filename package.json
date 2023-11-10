@@ -26,7 +26,7 @@
     "update:version": "node ./build/bin/version.js",
     "clean": "rimraf lib",
     "publish2": "npm publish",
-    "gather": "yarn initLibsJs && yarn build:umdjs && yarn initEsmsJs && yarn build:es && yarn commit && yarn update:version && yarn publish2"
+    "gather": "yarn initLibsJs && yarn build:umdjs && yarn initEsmsJs && yarn build:es && yarn commit && yarn update:version"
   },
   "dependencies": {
     "core-js": "^3.6.5",
