@@ -6,8 +6,8 @@
 </template>
 
 <script>
-// const LCCXUI = require('lccx-ui') // 全部引入
-// const { Checkbox } = require('lccx-ui') // 单组件引入（会打包整个库）
+// const LCCXUI = require('lccx-ui') // commonjs规范，全部引入
+// const { Checkbox } = require('lccx-ui') // commonjs规范，单组件引入（会打包整个库）
 
 // import Checkbox from 'lccx-ui/packages/checkbox/index' // 单组件引入（这个可以实现打包的时候是按需打包的，不会把整个组件库所有的内容都打包进来）
 
@@ -24,7 +24,7 @@
     ]
   ]
  */
-import { Checkbox } from 'lccx-ui' // 如果要实现按需加载需要安装  yarn add babel-plugin-import -D ，且在babel的配置文件里加上配置
+import { Checkbox } from 'lccx-ui' // es规范，如果要实现按需加载需要安装  yarn add babel-plugin-import -D ，且在babel的配置文件里加上配置
 
 // const LCCXUI = require('../../lib/lccx-ui.common')
 // console.log(Checkbox, 'Checkbox')

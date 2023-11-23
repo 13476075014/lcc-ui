@@ -4,15 +4,15 @@
  * 2.用json-templater/string来拼接输出所有组件的index.js文件里面的内容
  * 3.用fs.writeFileSync来把拼接的内容写入index.js文件里
  */
-const path = require("path");
-const fs = require("fs");
-const glob = require("glob");
-const uppercamelcase = require("uppercamelcase");
-const render = require('json-templater/string');
-var endOfLine = require('os').EOL;
-const componentsDir = path.join(__dirname,"../../packages/*/*.js");
+const path = require("path");//拼接路径
+const fs = require("fs");//文件写入，读取
+const glob = require("glob");//文件夹读取输出
+const uppercamelcase = require("uppercamelcase");//大小写转换
+const render = require('json-templater/string');//字符串拼接文件内容可以带参数
+var endOfLine = require('os').EOL;//不同该系统换行符
+const componentsDir = path.join(__dirname,"../../packages/*/*.js");//需要读取的UI组件库的目录下哪些文件
 
-const allComponentsFiles = glob.sync(componentsDir,"");
+const allComponentsFiles = glob.sync(componentsDir,"");//读取的UI组件库地址
 
 // 文件里面引入组件的模板
 var IMPORT_TEMPLATE = 'import {{name}} from \'../packages/{{package}}/index.js\';';
